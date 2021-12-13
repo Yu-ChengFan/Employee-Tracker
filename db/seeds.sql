@@ -1,29 +1,25 @@
-INSERT INTO department (name)
-VALUES
-    ('sales'),
-    ('design'),
-    ('manufacturing');
 
-INSERT INTO roles (title, salary, department_id)
+INSERT INTO departments
+    (dept_name)
 VALUES
-    ('sales_manager', 80000, 1),
-    ('design_manager', 70000, 2),
-    ('manufacturing_manager', 60000, 3),
-    ('sales_associate', 30000, 1),
-    ('designer', 40000, 2),
-    ('machine_operator', 25000, 3),
-    ('customer_service', 30000, 1),
-    ('engineer', 50000, 2),
-    ('maintenance', 30000, 3);
-
-INSERT INTO employees (first_name, last_name, role_id, manager_id)
+    ('Health Department'),
+    ('Accounting'),
+    ('Game Engineering');
+INSERT INTO roles
+    (title, salary, dept_id)
 VALUES
-    ('Kevin', 'Taylor', 1, null),
-    ('Owen', 'Dyer', 2, null),
-    ('Faith', 'North', 3, null),
-    ('Kylie', 'Ross', 4, 1),
-    ('Keith', 'Lyman', 5, 2),
-    ('Paul', 'White', 6, 3),
-    ('Yvonne', 'Henderson', 7, 1),
-    ('Andrew', 'Reid', 8, 2),
-    ('Phil', 'Jones', 9, 3);
+    ('Doctor', 90000, 1),
+    ('Nurse', 30000, 1),
+    ('Accountant', 90000, 2),
+    ('Reception', 40000, 2),
+    ('Game Engineer', 90000, 3),
+    ('Game Artist', 10000, 3);
+INSERT INTO employees
+    (first_name, last_name, role_id, manager_id)
+VALUES
+    ('Danny', 'Dan', 1, NULL),
+    ('Johnny', 'Jon', 2, 1),
+    ('Scotty', 'Scott', 3, NULL),
+    ('Peter', 'Parker', 4, 3),
+    ('Steve', 'Wonder', 5, NULL),
+    ('Travis', 'Debt', 6, NULL);
